@@ -2,6 +2,8 @@
 
 本文是本工作流的独立摘要，不是参考文章原文、译文或 OpenAI 官方规范。设计参考：[Rethinking skills and prompts for GPT-6 Astra](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra)。具体工作流以本仓库的 `SKILL.md` 为准。
 
+参考文章以特定模型为背景，本 Skill 采用其中的任务描述与授权边界原则，不限定目标模型。只在用户指定目标模型时使用其称谓；未指定时以中性执行者称呼编写，并以实际环境提供的工具和上下文能力为准。
+
 ## 把完成结果说清楚
 
 先明确本批要解决的问题、可观察的完成条件和停止位置。若目标包括实现、启动、验证及修复本次引入的问题，应把这些结果包含在本批完成条件内，避免执行者在第一份实现后提前交回。
