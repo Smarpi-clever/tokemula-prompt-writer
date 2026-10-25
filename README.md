@@ -1,6 +1,6 @@
 # tokemula-pormpt-writer
 
-为 Tokemula 的 Astra 分批任务编写与交接 Prompt 的 Codex Skill。写作会话负责整理下一份完整、可复制的任务 Prompt；执行、验证和独立审计留给相应会话。
+为 GPT-6系列及以上模型分批任务编写与交接 Prompt 的 Codex Skill。写作会话负责整理下一份完整、可复制的任务 Prompt；执行、验证和独立审计留给相应会话。
 
 这是用户工作流 Skill，并非 OpenAI 官方 Skill。仓库名保留 `pormpt` 拼写。
 
