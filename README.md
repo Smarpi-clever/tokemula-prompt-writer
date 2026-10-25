@@ -1,8 +1,8 @@
-# tokemula-pormpt-writer
+# tokemula-prompt-writer
 
 为 Tokemula 的 Astra 分批任务编写与交接 Prompt 的 Codex Skill。写作会话负责整理下一份完整、可复制的任务 Prompt；执行、验证和独立审计留给相应会话。
 
-这是用户工作流 Skill，并非 OpenAI 官方 Skill。仓库名保留 `pormpt` 拼写。
+这是用户工作流 Skill，并非 OpenAI 官方 Skill。
 
 ## 工作方式
 
@@ -18,7 +18,7 @@
 将仓库克隆到 Codex Skills 目录；若设置了 `CODEX_HOME`，使用对应的 `skills` 目录：
 
 ```sh
-git clone https://github.com/Smarpi-clever/tokemula-pormpt-writer.git ~/.codex/skills/tokemula-pormpt-writer
+git clone https://github.com/Smarpi-clever/tokemula-prompt-writer.git ~/.codex/skills/tokemula-prompt-writer
 ```
 
 已有本地 `tokemula-astra-prompts` 时，先比较版本，避免同时启用两份同用途 Skill。此仓库不自动改动已有安装或 Codex 配置。
@@ -26,7 +26,7 @@ git clone https://github.com/Smarpi-clever/tokemula-pormpt-writer.git ~/.codex/s
 ## 使用
 
 ```text
-使用 $tokemula-pormpt-writer。此会话只负责写 Prompt。
+使用 $tokemula-prompt-writer。此会话只负责写 Prompt。
 根据我提供的最新报告、任务入口和已有授权，写出下一批完整可复制的 Astra 任务 Prompt。
 ```
 

@@ -1,5 +1,5 @@
 ---
-name: tokemula-pormpt-writer
+name: tokemula-prompt-writer
 description: 仅用于编写或交接 Tokemula 的 Astra 分批任务 Prompt。
 ---
 
