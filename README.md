@@ -1,0 +1,39 @@
+# tokemula-pormpt-writer
+
+为 Tokemula 的 Astra 分批任务编写与交接 Prompt 的 Codex Skill。写作会话负责整理下一份完整、可复制的任务 Prompt；执行、验证和独立审计留给相应会话。
+
+这是用户工作流 Skill，并非 OpenAI 官方 Skill。仓库名保留 `pormpt` 拼写。
+
+## 工作方式
+
+- 根据当前目标、最新报告和已有授权确定下一批，明确完成条件和停止边界。
+- 保护现有定制、用户工作和数据，不恢复已取消任务。
+- 每批预算包含验证、独立审计和交接，最多两次上下文压缩。
+- 执行者完成后停止修改待审材料，再独立审查；失败或未知如实保留。
+
+两次压缩预算和自动独立审计是本工作流约定，可按其他项目的真实要求调整。使用前需有当前任务材料；Skill 不包含项目源码、私有交接或运行凭据。
+
+## 安装
+
+将仓库克隆到 Codex Skills 目录；若设置了 `CODEX_HOME`，使用对应的 `skills` 目录：
+
+```sh
+git clone https://github.com/Smarpi-clever/tokemula-pormpt-writer.git ~/.codex/skills/tokemula-pormpt-writer
+```
+
+已有本地 `tokemula-astra-prompts` 时，先比较版本，避免同时启用两份同用途 Skill。此仓库不自动改动已有安装或 Codex 配置。
+
+## 使用
+
+```text
+使用 $tokemula-pormpt-writer。此会话只负责写 Prompt。
+根据我提供的最新报告、任务入口和已有授权，写出下一批完整可复制的 Astra 任务 Prompt。
+```
+
+入口是 [SKILL.md](SKILL.md)，首次写作前阅读 [Prompt 写作原则](references/prompt-writing-principles.md)。交接给新写作会话时提供安装后的实际路径。
+
+## 参考与发布内容
+
+原则参考 OpenAI Developers 的 [Rethinking skills and prompts for GPT-6 Astra](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra)。本仓库仅保留独立摘要和来源链接，不再分发第三方文章全文。
+
+本次公开发布未添加开源许可证；公开可见不等于授予开源许可。
